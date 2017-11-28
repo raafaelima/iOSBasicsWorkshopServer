@@ -24,6 +24,11 @@
  
  /** Server deployment **/
  var port = config.PORT || 3000;
+
+ app.get('/', function(req, res) {
+    res.send('Hello! Im the workshop server. How can I help you?');
+ });
+
  app.listen(port)
 
  console.log('\n--- Information ---');
