@@ -21,14 +21,12 @@
  }))
  
  app.use('/', authController.router);
- 
- /** Server deployment **/
- var port = config.PORT || 5000;
-
  app.get('/', function(req, res) {
     res.send('Hello! Im the workshop server. How can I help you?');
  });
 
+ /** Server deployment **/
+ var port = process.env.PORT || 5000;
  app.listen(port)
 
  console.log('\n--- Information ---');
